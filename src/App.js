@@ -1,18 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Tabs, Tab, Container, Box } from '@mui/material';
+import Calculator from "./component/calculator"; // Import the Calculator component
+import Home from "./component/home"; // Create a simple Home component as an example
 
-// Home Tab Component
-function Home() {
-  return (
-    <Box sx={{ padding: '20px' }}>
-      <Typography variant="h4">Welcome to Jay Zhao's Website</Typography>
-      <Typography variant="body1" sx={{ marginTop: '10px' }}>
-        This is the home page of my personal website. Explore the tabs to learn more!
-      </Typography>
-    </Box>
-  );
-}
 
 // About Tab Component
 function About() {
@@ -62,7 +53,7 @@ function App() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            Jay Zhao's Website
+            Jay Zhao
           </Typography>
         </Toolbar>
       </AppBar>
@@ -75,6 +66,7 @@ function App() {
           centered
         >
           <Tab label="Home" value="/" component={Link} to="/" />
+          <Tab label="Calculator" value="/calculator" component={Link} to="/calculator" />
           <Tab label="About" value="/about" component={Link} to="/about" />
           <Tab label="Projects" value="/projects" component={Link} to="/projects" />
           <Tab label="Contact" value="/contact" component={Link} to="/contact" />
@@ -82,6 +74,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/calculator" element={<Calculator />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
