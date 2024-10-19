@@ -1,0 +1,259 @@
+{
+  "Sampling": {
+      "time": 10.0,
+      "output_count": 1.0,
+      "requires": {
+          "Water": 1.0
+      }
+  },
+  "Tree": {
+      "time": 15.0,
+      "output_count": 1.0,
+      "requires": {
+          "Apple": 1.0,
+          "Sampling": 1.0
+      }
+  },
+  "Log": {
+      "time": 20.0,
+      "output_count": 2.0,
+      "requires": {
+          "Bread": 1.0,
+          "Sampling": 1.0
+      }
+  },
+  "Board": {
+      "time": 25.0,
+      "output_count": 2.0,
+      "requires": {
+          "Log": 1.0,
+          "Stone Tool": 1.0
+      }
+  },
+  "Coal": {
+      "time": 10.0,
+      "output_count": 3.0,
+      "requires": {
+          "Bread": 1.0
+      }
+  },
+  "Beam": {
+      "time": 40.0,
+      "output_count": 2.0,
+      "requires": {
+          "Iron Tool": 1.0,
+          "Board": 1.0
+      }
+  },
+  "Apple": {
+      "time": 10.0,
+      "output_count": 2.0,
+      "requires": {
+          "Water": 1.0
+      }
+  },
+  "Juice": {
+      "time": 15.0,
+      "output_count": 2.0,
+      "requires": {
+          "Board": 1.0,
+          "Apple": 1.0
+      }
+  },
+  "Wheat": {
+      "time": 10.0,
+      "output_count": 2.0,
+      "requires": {
+          "Water": 1.0
+      }
+  },
+  "Bread": {
+      "time": 20.0,
+      "output_count": 2.0,
+      "requires": {
+          "Wheat": 2.0,
+          "Coal": 1.0
+      }
+  },
+  "Cow": {
+      "time": 15.0,
+      "output_count": 2.0,
+      "requires": {
+          "Water": 1.0,
+          "Wheat": 1.0
+      }
+  },
+  "Milk": {
+      "time": 20.0,
+      "output_count": 2.0,
+      "requires": {
+          "Cow": 1.0,
+          "Glass": 1.0
+      }
+  },
+  "Meat": {
+      "time": 20.0,
+      "output_count": 2.0,
+      "requires": {
+          "Cow": 1.0,
+          "Iron Tool": 1.0
+      }
+  },
+  "Sandwich": {
+      "time": 20.0,
+      "output_count": 2.0,
+      "requires": {
+          "Bread": 1.0,
+          "Meat": 1.0
+      }
+  },
+  "Water": {
+      "time": 20.0,
+      "output_count": 2.0,
+      "requires": {
+          "Coal": 1.0
+      }
+  },
+  "Stone": {
+      "time": 10.0,
+      "output_count": 3.0,
+      "requires": {
+          "Bread": 1.0
+      }
+  },
+  "Iron Ore": {
+      "time": 10.0,
+      "output_count": 3.0,
+      "requires": {
+          "Bread": 1.0
+      }
+  },
+  "Sand": {
+      "time": 20.0,
+      "output_count": 1.0,
+      "requires": {
+          "Juice": 1.0
+      }
+  },
+  "Diamond": {
+      "time": 10.0,
+      "output_count": 3.0,
+      "requires": {
+          "Meat": 1.0,
+          "Steel Tool": 1.0
+      }
+  },
+  "Stone Tool": {
+      "time": 7.0,
+      "output_count": 2.0,
+      "requires": {
+          "Stone": 1.0,
+          "Log": 1.0
+      }
+  },
+  "Iron Tool": {
+      "time": 10.0,
+      "output_count": 2.0,
+      "requires": {
+          "Iron": 1.0,
+          "Stone Tool": 1.0
+      }
+  },
+  "Steel Tool": {
+      "time": 15.0,
+      "output_count": 2.0,
+      "requires": {
+          "Steel": 1.0,
+          "Iron Tool": 1.0
+      }
+  },
+  "Chair": {
+      "time": 15.0,
+      "output_count": 2.0,
+      "requires": {
+          "Tree": 1.0,
+          "Stone Tool": 1.0
+      }
+  },
+  "Couch": {
+      "time": 15.0,
+      "output_count": 1.0,
+      "requires": {
+          "Leather": 1.0,
+          "Chair": 1.0
+      }
+  },
+  "Sofa": {
+      "time": 25.0,
+      "output_count": 1.0,
+      "requires": {
+          "Diamond": 1.0,
+          "Couch": 1.0
+      }
+  },
+  "Stone Block": {
+      "time": 25.0,
+      "output_count": 2.0,
+      "requires": {
+          "Stone": 1.0,
+          "Stone tool": 1.0
+      }
+  },
+  "Stone Mason": {
+      "time": 40.0,
+      "output_count": 2.0,
+      "requires": {
+          "Iron Tool": 1.0,
+          "Stone Block": 1.0
+      }
+  },
+  "Iron": {
+      "time": 15.0,
+      "output_count": 2.0,
+      "requires": {
+          "Coal": 1.0,
+          "Iron Ore": 2.0
+      }
+  },
+  "Paper": {
+      "time": 30.0,
+      "output_count": 2.0,
+      "requires": {
+          "Log": 1.0,
+          "Iron Tool": 1.0
+      }
+  },
+  "Leather": {
+      "time": 20.0,
+      "output_count": 2.0,
+      "requires": {
+          "Cow": 1.0,
+          "Iron Tool": 1.0
+      }
+  },
+  "Glass": {
+      "time": 25.0,
+      "output_count": 2.0,
+      "requires": {
+          "Sand": 1.0,
+          "Coal": 1.0
+      }
+  },
+  "Steel": {
+      "time": 20.0,
+      "output_count": 1.0,
+      "requires": {
+          "Coal": 1.0,
+          "Iron": 1.0
+      }
+  },
+  "Book": {
+      "time": 25.0,
+      "output_count": 2.0,
+      "requires": {
+          "Leather": 1.0,
+          "Paper": 1.0,
+          "Steel Tool": 1.0
+      }
+  }
+}
