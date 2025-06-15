@@ -401,8 +401,6 @@ export const gameReducer = (state, action) => {
     case ACTIONS.GENERATE_ALL_ORES: {
       // 在所有空地块生成矿石
       const newMiningGrid = [...state.miningGrid];
-      let generatedCount = 0;
-      
       newMiningGrid.forEach((cell, index) => {
         if (cell === null) {
           // 根据概率随机选择矿石类型
@@ -421,7 +419,6 @@ export const gameReducer = (state, action) => {
             isMining: false,
             miningProgress: 0
           };
-          generatedCount++;
         }
       });
       
@@ -434,8 +431,6 @@ export const gameReducer = (state, action) => {
     case ACTIONS.MINE_ALL: {
       // 开始挖掘所有未挖掘的矿石
       const newMiningGrid = [...state.miningGrid];
-      let minedCount = 0;
-      
       newMiningGrid.forEach((cell, index) => {
         if (cell && !cell.isMining) {
           newMiningGrid[index] = {
@@ -444,7 +439,6 @@ export const gameReducer = (state, action) => {
             miningProgress: 0,
             minedAt: state.gameTime
           };
-          minedCount++;
         }
       });
       
@@ -458,14 +452,12 @@ export const gameReducer = (state, action) => {
       // 收集所有已完成的矿石
       const newMiningGrid = [...state.miningGrid];
       const newInventory = { ...state.miningInventory };
-      let collectedCount = 0;
       
       newMiningGrid.forEach((cell, index) => {
         if (cell && cell.isMining && 
             state.gameTime - cell.minedAt >= ores[cell.type].miningTime) {
           newMiningGrid[index] = null;
           newInventory[cell.type] = (newInventory[cell.type] || 0) + 1;
-          collectedCount++;
         }
       });
       

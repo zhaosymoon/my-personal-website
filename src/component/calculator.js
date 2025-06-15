@@ -40,9 +40,7 @@ const Calculator = () => {
       // Calculate how many units can be produced per time period
       const unitsPerPeriod = Math.floor(timePeriod / productionTime);
 
-      // If you can't produce the required quantity in the time period, you'll need more periods
-      const periodsNeeded = Math.ceil(qty / unitsPerPeriod);
-
+      // Note: periodsNeeded calculation removed as it wasn't being used
       result[name] += qty;
 
       const requirements = resources[name]?.requires || {};

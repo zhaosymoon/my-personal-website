@@ -127,12 +127,11 @@ const FarmGame = () => {
     ).length;
   };
 
-  // 计算空地数量和可种植数量
+  // 计算可种植数量
   const getPlantInfo = () => {
     const emptySlots = state.grid.filter(cell => cell === null).length;
     const maxAffordable = Math.floor(state.money / crops[state.selectedCrop].seedPrice);
     return {
-      emptySlots,
       plantable: Math.min(emptySlots, maxAffordable)
     };
   };
