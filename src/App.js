@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Tabs, Tab, Container, Box } from '@mui/material';
 import Calculator from "./component/calculator"; // Import the Calculator component
 import Home from "./component/home"; // Create a simple Home component as an example
+import FarmGame from "./component/games/FarmGame"; // Import the Farm Game component
 
 
 // About Tab Component
@@ -67,6 +68,7 @@ function App() {
         >
           <Tab label="Home" value="/" component={Link} to="/" />
           <Tab label="Calculator" value="/calculator" component={Link} to="/calculator" />
+          <Tab label="Farm Game" value="/farm-game" component={Link} to="/farm-game" />
           <Tab label="About" value="/about" component={Link} to="/about" />
           <Tab label="Projects" value="/projects" component={Link} to="/projects" />
           <Tab label="Contact" value="/contact" component={Link} to="/contact" />
@@ -75,6 +77,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/calculator" element={<Calculator />} />
+          <Route path="/farm-game" element={<FarmGame />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
