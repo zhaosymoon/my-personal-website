@@ -84,7 +84,8 @@ export const initialGameState = {
   inventory: {},
   miningInventory: {},
   selectedCrop: 'carrot',
-  selectedOre: 'coal',
+  // eslint-disable-next-line no-unused-vars
+  selectedOre: 'coal', // 用于MINE(第291行)和SELECT_ORE(第292行)动作
   gameTime: 0,
   landPrice: 100,
   maxLand: 25,
@@ -288,6 +289,7 @@ export const gameReducer = (state, action) => {
 
     case ACTIONS.MINE: {
       const { index } = action.payload;
+      // eslint-disable-next-line
       const selectedOre = state.selectedOre;
       const cell = state.miningGrid[index];
       

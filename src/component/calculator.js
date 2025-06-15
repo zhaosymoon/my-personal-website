@@ -37,10 +37,8 @@ const Calculator = () => {
       // Time required to produce one unit of the current resource
       const productionTime = resources[name].time;
       
-      // Calculate how many units can be produced per time period
-      const unitsPerPeriod = Math.floor(timePeriod / productionTime);
-
-      // Note: periodsNeeded calculation removed as it wasn't being used
+      // Calculate production capacity (unitsPerPeriod was calculated but not used)
+      Math.floor(timePeriod / productionTime); // Result not stored as it's unused
       result[name] += qty;
 
       const requirements = resources[name]?.requires || {};

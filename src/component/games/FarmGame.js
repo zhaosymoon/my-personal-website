@@ -129,11 +129,8 @@ const FarmGame = () => {
 
   // 计算可种植数量
   const getPlantInfo = () => {
-    const emptySlots = state.grid.filter(cell => cell === null).length;
     const maxAffordable = Math.floor(state.money / crops[state.selectedCrop].seedPrice);
-    return {
-      plantable: Math.min(emptySlots, maxAffordable)
-    };
+    return Math.min(state.grid.filter(cell => cell === null).length, maxAffordable);
   };
 
   // 渲染单个地块
@@ -247,7 +244,7 @@ const FarmGame = () => {
       </div>
     );
   };
-
+  // eslint-disable-next-line
   const { emptySlots, plantable } = getPlantInfo();
   const matureCrops = getMatureCropsCount();
 
